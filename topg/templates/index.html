@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload PDFs</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Upload PDFs to Merge</h1>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="pdfs" id="pdfs" multiple hidden>
+        <label for="pdfs" class="custom-file-input">Choose the files</label>
+        <span id="file-chosen">No file chosen</span>
+        <button type="submit">Upload and Merge</button>
+    </form>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
